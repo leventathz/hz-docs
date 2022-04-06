@@ -94,9 +94,9 @@ The `--targets` parameter tells the SQL shell to connect to the member at the gi
 +
 [source,sql]
 ----
-CREATE MAPPING my_distributed_map TYPE IMap OPTIONS ('keyFormat'='varchar','valueFormat'='varchar');
+CREATE MAPPING "my-distributed-map" TYPE IMap OPTIONS ('keyFormat'='varchar','valueFormat'='varchar');
 
-SINK INTO my_distributed_map VALUES
+SINK INTO "my-distributed-map" VALUES
 ('1', 'John'),
 ('2', 'Mary'),
 ('3', 'Jane');
@@ -386,7 +386,7 @@ docker run --network hazelcast-network -it --rm hazelcast/hazelcast:{full-versio
 +
 [source,sql]
 ----
-SELECT * FROM my_distributed_map;
+SELECT * FROM "my-distributed-map";
 ----
 +
 ```
